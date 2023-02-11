@@ -10,10 +10,12 @@ app.get("/", (req, res) => {
 // Require Routes -- RANDOM
 const headsOrTails = require("./routes/fun/headsOrTails");
 const randomDare = require("./routes/fun/randomDare");
+const randomTruth = require("./routes/fun/randomTruth");
 
 // Use Routes -- RANDOM
 app.use("/random/headsOrTails", headsOrTails);
 app.use("/random/randomDare", randomDare);
+app.use("/random/randomTruth", randomTruth);
 
 app.listen(port, () => {
   console.log(`Listening at http://localhost:3000`);

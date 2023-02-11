@@ -16,8 +16,13 @@ function getRandomDare() {
   return data.dares[getRandNumber(0, data.dares.length - 1)];
 }
 
+function getRandomTruth() {
+  return data.truths[getRandNumber(0, data.truths.length - 1)];
+}
+
 module.exports = {
   getRandNumber,
   headsOrTails,
   getRandomDare,
+  getRandomTruth,
 };
