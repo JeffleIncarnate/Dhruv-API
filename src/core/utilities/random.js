@@ -1,3 +1,6 @@
+// Data
+const data = require("../data/data");
+
 function getRandNumber(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -9,4 +12,12 @@ function headsOrTails() {
   return num == 1 ? "Heads" : "Tails";
 }
 
-module.exports = { getRandNumber, headsOrTails };
+function getRandomDare() {
+  return data.dares[getRandNumber(0, data.dares.length - 1)];
+}
+
+module.exports = {
+  getRandNumber,
+  headsOrTails,
+  getRandomDare,
+};
